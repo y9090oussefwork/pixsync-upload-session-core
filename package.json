@@ -1,0 +1,46 @@
+{
+  "name": "pixsync-upload-session-core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Multi-tenant upload session core: atomic quota reservations, tenant-scoped idempotency, and exactly-once completion semantics for a direct-to-B2 photo upload flow.",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "multi-tenancy",
+    "idempotency",
+    "quota",
+    "clean-architecture",
+    "ports-and-adapters",
+    "upload",
+    "vitest"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "npm run build --silent && node examples/demo.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  }
+}
