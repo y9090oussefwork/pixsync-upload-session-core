@@ -1,7 +1,6 @@
 {
   "name": "pixsync-upload-session-core",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "description": "Multi-tenant upload session core: atomic quota reservations, tenant-scoped idempotency, and exactly-once completion semantics for a direct-to-B2 photo upload flow.",
   "license": "MIT",
